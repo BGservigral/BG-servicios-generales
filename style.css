@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET & CONFIGURACIÓN GENERAL (Off-White y Navy)
+   RESET & CONFIGURACIÓN GENERAL (Blanco medio azulado y Navy)
    ========================================================================== */
 * {
   margin: 0;
@@ -9,14 +9,15 @@
 }
 
 :root {
-  --bg-light: #f8fafc;       /* Off-white limpio */
+  --bg-light: #eef2f6;       /* Fondo blanco medio azulado solicitado */
   --bg-card: #ffffff;       /* Blanco puro para tarjetas */
-  --navy-dark: #0a1128;     /* Navy profundo y elegante */
-  --navy-mid: #1e293b;      /* Navy corporativo */
-  --primary: #1d4ed8;       /* Azul acentuado profesional */
-  --accent-green: #16a34a;  /* Verde WhatsApp institucional */
-  --text-main: #0f172a;     /* Texto principal oscuro navy */
-  --text-muted: #475569;    /* Texto secundario formal */
+  --navy-dark: #0a1128;     
+  --navy-mid: #1e293b;      
+  --primary: #1d4ed8;       
+  --accent-cyan: #0284c7;   
+  --accent-green: #16a34a;  
+  --text-main: #0f172a;     
+  --text-muted: #475569;    
   --font-heading: 'Montserrat', sans-serif; 
   --font-body: 'Roboto', sans-serif;
 }
@@ -40,7 +41,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 8%;
-  background: rgba(248, 250, 252, 0.95);
+  background: rgba(238, 242, 246, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(30, 41, 59, 0.1);
   z-index: 1000;
@@ -95,7 +96,7 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (Fondo Off-White con Texto Navy e Imponente)
+   HERO SECTION
    ========================================================================== */
 .hero {
   position: relative;
@@ -105,8 +106,8 @@ body {
   justify-content: center;
   padding: 140px 6% 60px;
   background: 
-    radial-gradient(circle at 50% 30%, rgba(29, 78, 216, 0.08), transparent 70%),
-    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    radial-gradient(circle at 50% 30%, rgba(29, 78, 216, 0.1), transparent 70%),
+    linear-gradient(135deg, #eef2f6 0%, #d8e2ed 100%);
   text-align: center;
 }
 
@@ -132,19 +133,19 @@ body {
   text-transform: uppercase;
 }
 
-/* TÍTULO PRINCIPAL MASIVO Y ELEGANTE EN NAVY */
 .main-brand-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 7vw, 6rem); 
+  font-size: clamp(2.8rem, 6.5vw, 5.8rem); 
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.1;
   margin-bottom: 20px;
-  color: var(--navy-dark);
   letter-spacing: -1px;
 }
 
-.text-navy {
-  color: var(--primary);
+.gradient-text {
+  background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 50%, #0a1128 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-slogan {
@@ -208,7 +209,7 @@ body {
 }
 
 /* ==========================================================================
-   BARRA DE GARANTÍAS (Navy background / Texto blanco)
+   BARRA DE GARANTÍAS
    ========================================================================== */
 .stats-bar {
   display: flex;
@@ -281,7 +282,7 @@ body {
   background: var(--bg-card);
   padding: 40px 30px;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #cbd5e1;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
@@ -360,7 +361,7 @@ body {
    ========================================================================== */
 .about-section {
   padding: 90px 8%;
-  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  background: linear-gradient(135deg, #d8e2ed 0%, #cbd5e1 100%);
   display: flex;
   align-items: center;
   gap: 50px;
@@ -544,7 +545,7 @@ footer {
   }
 
   .main-brand-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .stats-bar {
