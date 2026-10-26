@@ -231,4 +231,21 @@
   </footer>
 
 </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redireccionando...</title>
+    <script type="text/javascript">
+      // Limpia los parámetros de Facebook e intenta cargar la raíz del sitio
+      var l = window.location;
+      if (l.search.indexOf('fbclid=') !== -1) {
+        // Redirige eliminando los parámetros de seguimiento de Facebook
+        window.location.replace(l.protocol + '//' + l.hostname + l.pathname);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Cargando sitio...</p>
+  </body>
 </html>
