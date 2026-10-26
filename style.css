@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET & CONFIGURACIÓN GENERAL
+   RESET & CONFIGURACIÓN GENERAL (Off-White y Navy)
    ========================================================================== */
 * {
   margin: 0;
@@ -9,15 +9,14 @@
 }
 
 :root {
-  --bg-light: #f0f4f8;       
-  --bg-card: #ffffff;       
-  --bg-section: #e2e8f0;    
-  --primary: #1d4ed8;       
-  --primary-light: #3b82f6; 
-  --secondary: #475569;     
-  --accent-green: #16a34a;  
-  --text-main: #0f172a;     
-  --text-muted: #475569;    
+  --bg-light: #f8fafc;       /* Off-white limpio */
+  --bg-card: #ffffff;       /* Blanco puro para tarjetas */
+  --navy-dark: #0a1128;     /* Navy profundo y elegante */
+  --navy-mid: #1e293b;      /* Navy corporativo */
+  --primary: #1d4ed8;       /* Azul acentuado profesional */
+  --accent-green: #16a34a;  /* Verde WhatsApp institucional */
+  --text-main: #0f172a;     /* Texto principal oscuro navy */
+  --text-muted: #475569;    /* Texto secundario formal */
   --font-heading: 'Montserrat', sans-serif; 
   --font-body: 'Roboto', sans-serif;
 }
@@ -31,7 +30,7 @@ body {
 }
 
 /* ==========================================================================
-   NAVEGACIÓN & LOGOTIPO
+   NAVEGACIÓN & LOGOTIPO EN TEXTO
    ========================================================================== */
 .navbar {
   position: fixed;
@@ -41,27 +40,20 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 8%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(248, 250, 252, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(29, 78, 216, 0.15);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.1);
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--navy-dark);
   text-decoration: none;
-}
-
-.brand-logo {
-  height: 40px;
-  width: auto;
-  transition: transform 0.3s ease;
-}
-
-.brand-logo:hover {
-  transform: scale(1.03);
+  letter-spacing: 0.5px;
 }
 
 .highlight {
@@ -93,7 +85,7 @@ body {
   padding: 8px 18px;
   border-radius: 50px;
   font-weight: bold !important;
-  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
   transition: transform 0.3s, box-shadow 0.3s !important;
 }
 
@@ -103,7 +95,7 @@ body {
 }
 
 /* ==========================================================================
-   HERO SECTION (TÍTULO MASIVO Y LOGOTIPO DESTACADO)
+   HERO SECTION (Fondo Off-White con Texto Navy e Imponente)
    ========================================================================== */
 .hero {
   position: relative;
@@ -113,67 +105,53 @@ body {
   justify-content: center;
   padding: 140px 6% 60px;
   background: 
-    radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.18), transparent 70%),
+    radial-gradient(circle at 50% 30%, rgba(29, 78, 216, 0.08), transparent 70%),
     linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   text-align: center;
 }
 
 .hero-content {
-  max-width: 1100px; /* Ampliado para dar espacio al título grande */
+  max-width: 1100px;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hero-logo-box {
-  margin-bottom: 20px;
-  animation: float-logo 3s ease-in-out infinite alternate;
-}
-
-.hero-title-logo {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 6px 16px rgba(29, 78, 216, 0.25));
-  border-radius: 8px;
-}
-
 .badge {
   display: inline-block;
-  background: rgba(29, 78, 216, 0.1);
-  border: 1px solid rgba(29, 78, 216, 0.3);
+  background: rgba(29, 78, 216, 0.08);
+  border: 1px solid rgba(29, 78, 216, 0.25);
   color: var(--primary);
   padding: 6px 18px;
   border-radius: 20px;
   font-size: 0.9rem;
   font-family: var(--font-heading);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-transform: uppercase;
 }
 
-/* TÍTULO PRINCIPAL (H1) AUMENTADO A LO MÁXIMO */
-.hero h1 {
+/* TÍTULO PRINCIPAL MASIVO Y ELEGANTE EN NAVY */
+.main-brand-title {
   font-family: var(--font-heading);
-  font-size: clamp(3.2rem, 7.5vw, 6.2rem); 
+  font-size: clamp(3rem, 7vw, 6rem); 
   font-weight: 900;
-  line-height: 1.08;
+  line-height: 1.05;
   margin-bottom: 20px;
-  color: #0f172a;
-  letter-spacing: -1.5px;
+  color: var(--navy-dark);
+  letter-spacing: -1px;
 }
 
-.text-highlight {
+.text-navy {
   color: var(--primary);
-  position: relative;
 }
 
 .hero-slogan {
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: var(--navy-mid);
   letter-spacing: 1.5px;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -219,18 +197,18 @@ body {
 
 .btn-secondary {
   background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--navy-dark);
+  border: 2px solid var(--navy-dark);
 }
 
 .btn-secondary:hover {
-  background: var(--primary);
+  background: var(--navy-dark);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+  box-shadow: 0 4px 15px rgba(10, 17, 40, 0.25);
 }
 
 /* ==========================================================================
-   BARRA DE GARANTÍAS
+   BARRA DE GARANTÍAS (Navy background / Texto blanco)
    ========================================================================== */
 .stats-bar {
   display: flex;
@@ -238,10 +216,9 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   padding: 35px 8%;
-  background: #ffffff;
-  border-top: 1px solid #cbd5e1;
-  border-bottom: 1px solid #cbd5e1;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  background: var(--navy-dark);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .stat-item {
@@ -259,12 +236,12 @@ body {
   font-size: 1rem;
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--text-main);
+  color: #fff;
 }
 
 .stat-item p {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: #cbd5e1;
 }
 
 /* ==========================================================================
@@ -285,7 +262,7 @@ body {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 10px;
-  color: var(--text-main);
+  color: var(--navy-dark);
 }
 
 .section-title p {
@@ -304,7 +281,7 @@ body {
   background: var(--bg-card);
   padding: 40px 30px;
   border-radius: 12px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #e2e8f0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
@@ -312,7 +289,7 @@ body {
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(29, 78, 216, 0.12);
+  box-shadow: 0 12px 30px rgba(10, 17, 40, 0.08);
   border-color: var(--primary);
 }
 
@@ -340,7 +317,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--text-main);
+  color: var(--navy-dark);
 }
 
 .service-card p {
@@ -400,11 +377,11 @@ body {
   font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 20px;
-  color: var(--text-main);
+  color: var(--navy-dark);
 }
 
 .about-content p {
-  color: var(--text-muted);
+  color: var(--navy-mid);
   font-size: 1.05rem;
 }
 
@@ -419,7 +396,7 @@ body {
   align-items: center;
   gap: 12px;
   font-weight: 500;
-  color: var(--text-main);
+  color: var(--navy-dark);
 }
 
 .about-content li i {
@@ -439,7 +416,7 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 3px solid rgba(29, 78, 216, 0.3);
+  border: 3px solid var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -474,7 +451,7 @@ body {
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 15px;
-  color: var(--text-main);
+  color: var(--navy-dark);
 }
 
 .cta-card p {
@@ -520,7 +497,7 @@ body {
 footer {
   text-align: center;
   padding: 30px;
-  background: #0f172a;
+  background: var(--navy-dark);
   color: #94a3b8;
   font-size: 0.9rem;
 }
@@ -528,15 +505,6 @@ footer {
 /* ==========================================================================
    ANIMACIONES CSS
    ========================================================================== */
-@keyframes float-logo {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-8px);
-  }
-}
-
 @keyframes subtle-pulse {
   0% {
     box-shadow: 0 5px 15px rgba(29, 78, 216, 0.1);
@@ -575,7 +543,7 @@ footer {
     font-size: 0.85rem;
   }
 
-  .hero h1 {
+  .main-brand-title {
     font-size: 2.5rem;
   }
 
