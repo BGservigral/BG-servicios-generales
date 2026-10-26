@@ -8,17 +8,16 @@
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
   <!-- Encabezado / Navegación -->
   <header class="navbar">
-    <div class="logo">
-      <i class="fa-solid fa-bolt spark-icon"></i>
-      <span>BG <span class="highlight">SERVICIOS GENERALES</span></span>
-    </div>
+    <a href="#inicio" class="logo-container">
+      <img src="logo.png" alt="BG Servicios Generales Logo" class="brand-logo">
+    </a>
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
@@ -31,12 +30,21 @@
   <section id="inicio" class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="badge"><i class="fa-solid fa-bolt-lightning"></i> Soluciones Energéticas e Industriales</div>
-      <h1>POTENCIA, PRECISIÓN Y <span class="text-glow">AUTOMATIZACIÓN</span></h1>
-      <p>Expertos en ingeniería eléctrica, mantenimiento industrial especializado y gestión normativa integral para tu empresa o proyecto.</p>
+      <!-- Imagen oficial del logo -->
+      <div class="hero-logo-box">
+        <img src="logo.png" alt="BG Servicios Generales" class="hero-title-logo">
+      </div>
+      
+      <div class="badge"><i class="fa-solid fa-bolt-lightning"></i> Soluciones Integrales para Empresas e Industrias</div>
+      
+      <!-- Título principal masivo -->
+      <h1>POTENCIA, PRECISIÓN Y <span class="text-glow">EXCELENCIA</span></h1>
+      
+      <p class="hero-slogan">"La solución a cualquier hora y momento"</p>
+      <p class="hero-desc">Automatización, mantenimiento industrial y servicios generales multidisciplinarios.</p>
+      
       <div class="hero-buttons">
-        <a href="https://wa.me/+595986167081?text=Hola, quisiera solicitar información sobre sus servicios
-        " target="_blank" class="btn-primary">
+        <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios" target="_blank" class="btn-primary">
           <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
         </a>
         <a href="#servicios" class="btn-secondary">Ver Servicios</a>
@@ -44,7 +52,7 @@
     </div>
   </section>
 
-  <!-- Banner Flotante de Garantía -->
+  <!-- Banner de Garantía -->
   <section class="stats-bar">
     <div class="stat-item">
       <i class="fa-solid fa-shield-halved"></i>
@@ -56,15 +64,15 @@
     <div class="stat-item">
       <i class="fa-solid fa-clock"></i>
       <div>
-        <h3>Respuesta Rápida</h3>
-        <p>Soporte y mantenimiento técnico</p>
+        <h3>Disponibilidad 24/7</h3>
+        <p>Soporte técnico permanente</p>
       </div>
     </div>
     <div class="stat-item">
       <i class="fa-solid fa-gears"></i>
       <div>
-        <h3>Alta Tecnología</h3>
-        <p>Automatización de vanguardia</p>
+        <h3>Soluciones Integrales</h3>
+        <p>Eléctricas, civiles y técnicas</p>
       </div>
     </div>
   </section>
@@ -73,7 +81,7 @@
   <section id="servicios" class="services-section">
     <div class="section-title">
       <h2>NUESTROS <span class="highlight">SERVICIOS</span></h2>
-      <p>Soluciones técnicas avanzadas diseñadas a la medida de la industria y la red eléctrica.</p>
+      <p>Soluciones técnicas avanzadas diseñadas a la medida de la industria, comercios y residencias.</p>
     </div>
 
     <div class="services-grid">
@@ -83,7 +91,7 @@
           <i class="fa-solid fa-microchip"></i>
         </div>
         <h3>Automatización Industrial</h3>
-        <p>Programación de PLC, diseño de tableros de control, sistemas SCADA, sensores y optimización de procesos productivos para mayor eficiencia.</p>
+        <p>Automatización por lógica cableada y PLC, y preparación de diagramas eléctricos para optimizar y controlar procesos productivos de manera eficiente.</p>
         <span class="card-glow"></span>
       </div>
 
@@ -103,7 +111,7 @@
           <i class="fa-solid fa-snowflake"></i>
         </div>
         <h3>Instalación y Mantenimiento de A/A</h3>
-        <p>Sistemas de climatización industrial, comercial y residencial. Instalación, carga de gas, limpieza profunda y reparación de aires acondicionados.</p>
+        <p>Climatización industrial, comercial y residencial. Instalación, carga de gas, limpieza profunda y reparación de equipos acondicionadores.</p>
         <span class="card-glow"></span>
       </div>
 
@@ -113,7 +121,7 @@
           <i class="fa-solid fa-tower-cell"></i>
         </div>
         <h3>Extensiones de Línea MT y BT</h3>
-        <p>Montaje de líneas de Media Tensión (MT) y Baja Tensión (BT), instalación de puestos de transformación, tendidos aéreos y subterráneos.</p>
+        <p>Montaje de líneas de Media Tensión (MT) y Baja Tensión (BT), instalación de puestos de transformación y tendidos eléctricos seguros.</p>
         <span class="card-glow"></span>
       </div>
 
@@ -123,31 +131,51 @@
           <i class="fa-solid fa-file-signature"></i>
         </div>
         <h3>Gestión de Documentos en la ANDE</h3>
-        <p>Tramitación de planos, proyectos de electrización, aumentos de carga, firma de profesional matriculado y gestiones técnicas completas ante la ANDE.</p>
+        <p>Tramitación de planos, proyectos de electrización, aumentos de carga, firma de profesional matriculado y gestiones completas ante la ANDE.</p>
         <span class="card-glow"></span>
       </div>
 
-      <!-- Servicio 6 (Nuevo: Asistencia técnica 24 hrs) -->
+      <!-- Servicio 6 -->
       <div class="service-card">
         <div class="card-icon">
-          <i class="fa-solid fa-headset"></i>
+          <i class="fa-solid fa-helmet-safety"></i>
         </div>
-        <h3>Asistencia Técnica 24 Hrs</h3>
-        <p>Soporte técnico de emergencia permanente ante fallas imprevistas en instalaciones eléctricas, tableros o maquinaria industrial.</p>
+        <h3>Construcción</h3>
+        <p>Obras civiles, refacciones, estructuras y trabajos de albañilería general ejecutados con altos estándares de calidad y seguridad.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 7 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <h3>Jardinería</h3>
+        <p>Diseño, mantenimiento de áreas verdes, corte de césped, poda técnica y paisajismo para predios industriales, comerciales y residenciales.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 8 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-faucet-drip"></i>
+        </div>
+        <h3>Plomería</h3>
+        <p>Instalación, detección y reparación de fugas, mantenimiento de redes sanitarias, griferías, cañerías y sistemas de desagüe.</p>
         <span class="card-glow"></span>
       </div>
     </div>
   </section>
 
-  <!-- Sección Nosotros / Por qué elegirnos -->
+  <!-- Sección Nosotros -->
   <section id="nosotros" class="about-section">
     <div class="about-content">
       <h2>¿POR QUÉ ELEGIRNOS?</h2>
-      <p>Contamos con la experiencia, herramientas y certificaciones necesarias para ejecutar proyectos eléctricos e industriales con los más altos estándares de calidad y seguridad.</p>
+      <p>Contamos con profesionales capacitados y multidisciplinarios para ofrecer respuestas integrales a cualquier requerimiento técnico de su empresa.</p>
       <ul>
-        <li><i class="fa-solid fa-circle-check"></i> Profesionales matriculados capacitados.</li>
-        <li><i class="fa-solid fa-circle-check"></i> Asesoramiento personalizado en proyectos de baja y media tensión.</li>
-        <li><i class="fa-solid fa-circle-check"></i> Rapidez en la gestión documental técnica.</li>
+        <li><i class="fa-solid fa-circle-check"></i> Cobertura y asistencia técnica permanente.</li>
+        <li><i class="fa-solid fa-circle-check"></i> Profesionales matriculados y certificados.</li>
+        <li><i class="fa-solid fa-circle-check"></i> Eficiencia y rapidez en gestiones y obras.</li>
       </ul>
     </div>
     <div class="about-visual">
@@ -160,22 +188,22 @@
   <!-- Sección de Contacto -->
   <section id="contacto" class="cta-section">
     <div class="cta-card">
-      <h2>¿Tienes un proyecto en mente o necesitas asistencia inmediata?</h2>
-      <p>Haz clic en el botón a continuación y comunícate directamente con nuestro equipo técnico a través de WhatsApp.</p>
-      <a href="https://wa.me/+595986167081?text=Hola,%20necesito%20asesoramiento%20técnico" target="_blank" class="btn-whatsapp">
-        <i class="fa-brands fa-whatsapp"></i> Hablar con un Especialista
+      <h2>¿Necesitas asistencia técnica o soporte inmediato?</h2>
+      <p>Estamos disponibles a cualquier hora y momento. Comunícate directamente con nosotros a través de WhatsApp.</p>
+      <a href="https://wa.me/1234567890?text=Hola,%20necesito%20asesoramiento%20o%20presupuesto" target="_blank" class="btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
       </a>
-    </div>git 
+    </div>
   </section>
 
   <!-- Botón Flotante de WhatsApp -->
-  <a href="https://wa.me/+595986167081/?text=%20%20hacer%20una%20consulta" class="float-ws" target="_blank" aria-label="Contacto WhatsApp">
+  <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20hacer%20una%20consulta" class="float-ws" target="_blank" aria-label="Contacto WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- Pie de página -->
   <footer>
-    <p>&copy; 2026 BG Servicios Generales. Todos los derechos reservados.</p>
+    <p>&copy; 2026 BG Servicios Generales. Todos los derechos reservados. | La solución a cualquier hora y momento.</p>
   </footer>
 
 </body>

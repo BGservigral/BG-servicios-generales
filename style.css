@@ -9,19 +9,21 @@
 }
 
 :root {
-  --bg-dark: #0b0f19;
-  --bg-card: #131b2e;
-  --primary: #00e5ff;       /* Azul cian neón (electricidad) */
-  --secondary: #ffb703;     /* Amarillo energía */
-  --accent-green: #25d366;  /* Verde WhatsApp */
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --font-heading: 'Orbitron', sans-serif;
+  --bg-light: #f0f4f8;       
+  --bg-card: #ffffff;       
+  --bg-section: #e2e8f0;    
+  --primary: #1d4ed8;       
+  --primary-light: #3b82f6; 
+  --secondary: #475569;     
+  --accent-green: #16a34a;  
+  --text-main: #0f172a;     
+  --text-muted: #475569;    
+  --font-heading: 'Montserrat', sans-serif; 
   --font-body: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-light);
   color: var(--text-main);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -29,7 +31,7 @@ body {
 }
 
 /* ==========================================================================
-   NAVEGACIÓN & INTEGRACIÓN DEL LOGO
+   NAVEGACIÓN & LOGOTIPO
    ========================================================================== */
 .navbar {
   position: fixed;
@@ -39,10 +41,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 8%;
-  background: rgba(11, 15, 25, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+  border-bottom: 1px solid rgba(29, 78, 216, 0.15);
   z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container {
@@ -52,14 +55,13 @@ body {
 }
 
 .brand-logo {
-  height: 45px; /* Ajusta la altura de tu logo en el menú */
+  height: 40px;
   width: auto;
-  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.3));
   transition: transform 0.3s ease;
 }
 
 .brand-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .highlight {
@@ -75,7 +77,9 @@ body {
 .navbar nav a {
   color: var(--text-main);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
@@ -84,22 +88,22 @@ body {
 }
 
 .nav-btn-ws {
-  background: var(--accent-green);
+  background: var(--accent-green) !important;
   color: #fff !important;
   padding: 8px 18px;
   border-radius: 50px;
   font-weight: bold !important;
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
   transition: transform 0.3s, box-shadow 0.3s !important;
 }
 
 .nav-btn-ws:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4);
 }
 
 /* ==========================================================================
-   HERO SECTION & ESLOGAN CORPORATIVO
+   HERO SECTION (TÍTULO MASIVO Y LOGOTIPO DESTACADO)
    ========================================================================== */
 .hero {
   position: relative;
@@ -107,61 +111,79 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 8% 60px;
+  padding: 140px 6% 60px;
   background: 
-    radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.15), transparent 60%),
-    linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.95)),
-    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 41px),
-    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 41px);
+    radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.18), transparent 70%),
+    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   text-align: center;
 }
 
 .hero-content {
-  max-width: 850px;
+  max-width: 1100px; /* Ampliado para dar espacio al título grande */
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo-box {
+  margin-bottom: 20px;
+  animation: float-logo 3s ease-in-out infinite alternate;
+}
+
+.hero-title-logo {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(29, 78, 216, 0.25));
+  border-radius: 8px;
 }
 
 .badge {
   display: inline-block;
-  background: rgba(0, 229, 255, 0.1);
-  border: 1px solid var(--primary);
+  background: rgba(29, 78, 216, 0.1);
+  border: 1px solid rgba(29, 78, 216, 0.3);
   color: var(--primary);
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-family: var(--font-heading);
+  font-weight: 600;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
+/* TÍTULO PRINCIPAL (H1) AUMENTADO A LO MÁXIMO */
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  line-height: 1.2;
-  margin-bottom: 15px;
-  color: #fff;
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem); 
+  font-weight: 900;
+  line-height: 1.08;
+  margin-bottom: 20px;
+  color: #0f172a;
+  letter-spacing: -1.5px;
 }
 
-.text-glow {
+.text-highlight {
   color: var(--primary);
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+  position: relative;
 }
 
-/* Estilo para el eslogan oficial extraído del logo */
 .hero-slogan {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--secondary);
-  letter-spacing: 2px;
-  margin-bottom: 25px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255, 183, 3, 0.4);
 }
 
-.hero p {
-  font-size: 1.15rem;
+.hero-desc {
+  font-size: 1.25rem;
   color: var(--text-muted);
   margin-bottom: 35px;
+  max-width: 850px;
 }
 
 .hero-buttons {
@@ -172,12 +194,12 @@ body {
 }
 
 .btn-primary, .btn-secondary, .btn-whatsapp {
-  padding: 14px 28px;
+  padding: 15px 32px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -187,24 +209,24 @@ body {
 .btn-primary {
   background: var(--accent-green);
   color: #fff;
-  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 30px rgba(37, 211, 102, 0.7);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.5);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .btn-secondary:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
 }
 
 /* ==========================================================================
@@ -215,10 +237,11 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 30px 8%;
-  background: var(--bg-card);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 35px 8%;
+  background: #ffffff;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .stat-item {
@@ -229,12 +252,14 @@ body {
 
 .stat-item i {
   font-size: 2.2rem;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .stat-item h3 {
   font-size: 1rem;
   font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
 }
 
 .stat-item p {
@@ -243,10 +268,11 @@ body {
 }
 
 /* ==========================================================================
-   SERVICIOS
+   SECCIÓN DE SERVICIOS
    ========================================================================== */
 .services-section {
   padding: 100px 8%;
+  background-color: var(--bg-light);
 }
 
 .section-title {
@@ -256,12 +282,15 @@ body {
 
 .section-title h2 {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 10px;
+  color: var(--text-main);
 }
 
 .section-title p {
   color: var(--text-muted);
+  font-size: 1.1rem;
 }
 
 .services-grid {
@@ -275,20 +304,22 @@ body {
   background: var(--bg-card);
   padding: 40px 30px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   overflow: hidden;
-  transition: transform 0.4s ease, border-color 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(29, 78, 216, 0.12);
   border-color: var(--primary);
 }
 
 .card-icon {
   width: 60px;
   height: 60px;
-  background: rgba(0, 229, 255, 0.1);
+  background: rgba(29, 78, 216, 0.08);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -301,14 +332,15 @@ body {
 
 .service-card:hover .card-icon {
   background: var(--primary);
-  color: var(--bg-dark);
-  box-shadow: 0 0 20px var(--primary);
+  color: #fff;
 }
 
 .service-card h3 {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   margin-bottom: 15px;
+  color: var(--text-main);
 }
 
 .service-card p {
@@ -322,7 +354,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(29, 78, 216, 0.04) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -333,26 +365,25 @@ body {
 }
 
 .feature-card {
-  border-color: rgba(255, 183, 3, 0.3);
+  border-color: rgba(29, 78, 216, 0.3);
 }
 
 .feature-card .card-icon {
-  color: var(--secondary);
-  background: rgba(255, 183, 3, 0.1);
+  color: var(--primary);
+  background: rgba(29, 78, 216, 0.1);
 }
 
 .feature-card:hover .card-icon {
-  background: var(--secondary);
-  color: var(--bg-dark);
-  box-shadow: 0 0 20px var(--secondary);
+  background: var(--primary);
+  color: #fff;
 }
 
 /* ==========================================================================
-   NOSOTROS
+   SECCIÓN NOSOTROS
    ========================================================================== */
 .about-section {
-  padding: 80px 8%;
-  background: linear-gradient(90deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
   display: flex;
   align-items: center;
   gap: 50px;
@@ -366,9 +397,15 @@ body {
 
 .about-content h2 {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 800;
   margin-bottom: 20px;
-  color: var(--secondary);
+  color: var(--text-main);
+}
+
+.about-content p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
 .about-content ul {
@@ -377,14 +414,17 @@ body {
 }
 
 .about-content li {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--text-main);
 }
 
 .about-content li i {
   color: var(--primary);
+  font-size: 1.2rem;
 }
 
 .about-visual {
@@ -399,71 +439,76 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 3px solid var(--primary);
+  border: 3px solid rgba(29, 78, 216, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 5rem;
   color: var(--primary);
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
-  animation: electric-pulse 2s infinite alternate;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: subtle-pulse 3s infinite alternate;
 }
 
 /* ==========================================================================
-   CTA CONTACTO
+   CONTACTO CTA & BOTÓN FLOTANTE
    ========================================================================== */
 .cta-section {
-  padding: 80px 8%;
+  padding: 90px 8%;
   text-align: center;
+  background-color: var(--bg-light);
 }
 
 .cta-card {
-  background: linear-gradient(135deg, rgba(19, 27, 46, 0.9), rgba(0, 229, 255, 0.05));
-  border: 1px solid rgba(0, 229, 255, 0.3);
-  padding: 50px 30px;
-  border-radius: 15px;
-  max-width: 800px;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid #cbd5e1;
+  padding: 60px 40px;
+  border-radius: 16px;
+  max-width: 850px;
   margin: 0 auto;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
 }
 
 .cta-card h2 {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 800;
   margin-bottom: 15px;
+  color: var(--text-main);
 }
 
 .cta-card p {
   color: var(--text-muted);
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
 }
 
 .btn-whatsapp {
   background: var(--accent-green);
   color: #fff;
-  font-size: 1rem;
-  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+  font-size: 1.05rem;
+  box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
 }
 
 .btn-whatsapp:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px rgba(37, 211, 102, 0.8);
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.5);
 }
 
 .float-ws {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   background-color: var(--accent-green);
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  font-size: 34px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   z-index: 999;
   text-decoration: none;
   animation: pulse-float 2s infinite;
@@ -474,36 +519,44 @@ body {
    ========================================================================== */
 footer {
   text-align: center;
-  padding: 25px;
-  background: #060910;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  padding: 30px;
+  background: #0f172a;
+  color: #94a3b8;
+  font-size: 0.9rem;
 }
 
 /* ==========================================================================
-   KEYFRAMES / ANIMACIONES CSS
+   ANIMACIONES CSS
    ========================================================================== */
-@keyframes electric-pulse {
+@keyframes float-logo {
   0% {
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3), inset 0 0 15px rgba(0, 229, 255, 0.3);
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes subtle-pulse {
+  0% {
+    box-shadow: 0 5px 15px rgba(29, 78, 216, 0.1);
     transform: scale(0.98);
   }
   100% {
-    box-shadow: 0 0 50px rgba(0, 229, 255, 0.8), inset 0 0 30px rgba(0, 229, 255, 0.8);
+    box-shadow: 0 15px 30px rgba(29, 78, 216, 0.25);
     transform: scale(1.02);
   }
 }
 
 @keyframes pulse-float {
   0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.6);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 15px rgba(22, 163, 74, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
   }
 }
 
@@ -519,11 +572,11 @@ footer {
 
   .navbar nav {
     gap: 15px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .stats-bar {
