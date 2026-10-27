@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+<head><!DOCTYPE html>
+<html lang="es">
 <head>
+  <!-- SCRIPT ANTI-CORRUPCIÓN DE FACEBOOK (Colocar al inicio del head) -->
+  <script>
+    (function() {
+      // Detecta si la URL fue alterada por Facebook (fbclid o caracteres extraños)
+      var currentUrl = window.location.href;
+      
+      if (currentUrl.includes('fbclid=') || currentUrl.includes('%3F') || currentUrl.includes('?')) {
+        // Extrae únicamente la ruta limpia antes de los signos de interrogación o parámetros
+        var cleanUrl = window.location.origin + window.location.pathname;
+        
+        // Si la URL limpia es diferente a la actual, reemplaza la navegación inmediatamente
+        if (currentUrl !== cleanUrl) {
+          window.location.replace(cleanUrl);
+        }
+      }
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BG Servicios Generales - Servicios Eléctricos e Industriales</title>
+  ...
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BG Servicios Generales - Servicios Eléctricos e Industriales</title>
@@ -8,7 +32,8 @@
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Roboto:wght@300;
+  00;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
