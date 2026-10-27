@@ -1,26 +1,276 @@
 <!DOCTYPE html>
 <html lang="es">
+<head><!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirigiendo a BG Servicios Generales...</title>
+  <!-- SCRIPT ANTI-CORRUPCIÓN DE FACEBOOK (Colocar al inicio del head) -->
   <script>
     (function() {
-      // Obtiene la raíz del repositorio de GitHub Pages
-      var pathSegments = window.location.pathname.split('/');
+      // Detecta si la URL fue alterada por Facebook (fbclid o caracteres extraños)
+      var currentUrl = window.location.href;
       
-      // Si tu repositorio está en un subdominio (ej: usuario.github.io/nombre-repo)
-      var repoPath = pathSegments.length > 1 && pathSegments[1] ? '/' + pathSegments[1] + '/' : '/';
-      
-      // Reemplaza la URL rota enviando al usuario directamente al inicio limpio
-      window.location.replace(window.location.origin + repoPath);
+      if (currentUrl.includes('fbclid=') || currentUrl.includes('%3F') || currentUrl.includes('?')) {
+        // Extrae únicamente la ruta limpia antes de los signos de interrogación o parámetros
+        var cleanUrl = window.location.origin + window.location.pathname;
+        
+        // Si la URL limpia es diferente a la actual, reemplaza la navegación inmediatamente
+        if (currentUrl !== cleanUrl) {
+          window.location.replace(cleanUrl);
+        }
+      }
     })();
   </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BG Servicios Generales - Servicios Eléctricos e Industriales</title>
+  ...
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BG Servicios Generales - Servicios Eléctricos e Industriales</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Roboto:wght@300;
+  00;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body style="background-color: #eef2f6; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: #0a1128;">
-  <div style="text-align: center; padding: 20px;">
-    <h2>Cargando BG Servicios Generales...</h2>
-    <p>Te estamos redirigiendo a nuestra página principal.</p>
-  </div>
+<body>
+
+  <!-- Encabezado / Navegación -->
+  <header class="navbar">
+    <a href="#inicio" class="logo-text">
+      BG <span class="highlight">SERVICIOS GENERALES</span>
+    </a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto" class="nav-btn-ws"><i class="fa-brands fa-whatsapp"></i> Contactar</a>
+    </nav>
+  </header>
+
+  <!-- Sección Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <div class="badge"><i class="fa-solid fa-bolt-lightning"></i> Soluciones Integrales para Empresas e Industrias</div>
+      
+      <!-- Título de la empresa con color llamativo y formal (degradado) -->
+      <h1 class="main-brand-title">BG <span class="gradient-text">SERVICIOS GENERALES</span></h1>
+      
+      <p class="hero-slogan">"La solución a cualquier hora y momento"</p>
+      <p class="hero-desc">Automatización, mantenimiento industrial y servicios generales multidisciplinarios.</p>
+      
+      <div class="hero-buttons">
+        <a href="https://wa.me/+595986167081?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios" target="_blank" class="btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+        </a>
+        <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner de Garantía -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <i class="fa-solid fa-shield-halved"></i>
+      <div>
+        <h3>Seguridad Garantizada</h3>
+        <p>Normativas ANDE vigentes</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <i class="fa-solid fa-clock"></i>
+      <div>
+        <h3>Disponibilidad 24/7</h3>
+        <p>Soporte técnico permanente</p>
+      </div>
+    </div>
+    <div class="stat-item">
+      <i class="fa-solid fa-gears"></i>
+      <div>
+        <h3>Soluciones Integrales</h3>
+        <p>Eléctricas, civiles y técnicas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="services-section">
+    <div class="section-title">
+      <h2>NUESTROS <span class="highlight">SERVICIOS</span></h2>
+      <p>Soluciones técnicas avanzadas diseñadas a la medida de la industria, comercios y residencias.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Servicio 1 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h3>Automatización Industrial</h3>
+        <p>Automatización por lógica cableada y PLC, y preparación de diagramas eléctricos para optimizar y controlar procesos productivos de manera eficiente.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-industry"></i>
+        </div>
+        <h3>Mantenimiento Industrial</h3>
+        <p>Planes preventivos, correctivos y predictivos para maquinaria, electromotores, tableros de distribución y líneas de producción continuas.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-snowflake"></i>
+        </div>
+        <h3>Instalación y Mantenimiento de A/A</h3>
+        <p>Climatización industrial, comercial y residencial. Instalación, carga de gas, limpieza profunda y reparación de equipos acondicionadores.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-tower-cell"></i>
+        </div>
+        <h3>Extensiones de Línea MT y BT</h3>
+        <p>Montaje de líneas de Media Tensión (MT) y Baja Tensión (BT), instalación de puestos de transformación y tendidos eléctricos seguros.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 5 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-gas-pump"></i>
+        </div>
+        <h3>Instalación y Mantenimiento de Equipos Electrógenos</h3>
+        <p>Montaje, puesta en marcha, tableros de transferencia automática (ATS) y mantenimiento preventivo y correctivo de generadores eléctricos.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 6 -->
+      <div class="service-card feature-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-file-signature"></i>
+        </div>
+        <h3>Gestión de Documentos en la ANDE</h3>
+        <p>Tramitación de planos, proyectos de electrización, aumentos de carga, firma de profesional matriculado y gestiones completas ante la ANDE.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 7 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-helmet-safety"></i>
+        </div>
+        <h3>Construcción</h3>
+        <p>Obras civiles, refacciones, estructuras y trabajos de albañilería general ejecutados con altos estándares de calidad y seguridad.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 8 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <h3>Jardinería</h3>
+        <p>Diseño, mantenimiento de áreas verdes, corte de césped, poda técnica y paisajismo para predios industriales, comerciales y residenciales.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 9 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-faucet-drip"></i>
+        </div>
+        <h3>Plomería</h3>
+        <p>Instalación, detección y reparación de fugas, mantenimiento de redes sanitarias, griferías, cañerías y sistemas de desagüe.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 10 -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-water"></i>
+        </div>
+        <h3>Mantenimiento de Piscinas</h3>
+        <p>Mantenimiento de filtros, bombas y sistemas de recirculación para aguas cristalinas y seguras.</p>
+        <span class="card-glow"></span>
+      </div>
+
+      <!-- Servicio 11 (Asistencia técnica las 24 hrs) -->
+      <div class="service-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3>Asistencia Técnica las 24 Hrs</h3>
+        <p>Soporte técnico de emergencia permanente ante fallas imprevistas en instalaciones eléctricas, tableros o sistemas generales.</p>
+        <span class="card-glow"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="about-section">
+    <div class="about-content">
+      <h2>¿POR QUÉ ELEGIRNOS?</h2>
+      <p>Contamos con profesionales capacitados y multidisciplinarios para ofrecer respuestas integrales a cualquier requerimiento técnico de su empresa.</p>
+      <ul>
+        <li><i class="fa-solid fa-circle-check"></i> Cobertura y asistencia técnica permanente.</li>
+        <li><i class="fa-solid fa-circle-check"></i> Profesionales matriculados y certificados.</li>
+        <li><i class="fa-solid fa-circle-check"></i> Eficiencia y rapidez en gestiones y obras.</li>
+      </ul>
+    </div>
+    <div class="about-visual">
+      <div class="electric-circle">
+        <i class="fa-solid fa-gears"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="cta-section">
+    <div class="cta-card">
+      <h2>¿Necesitas asistencia técnica o soporte inmediato?</h2>
+      <p>Estamos disponibles a cualquier hora y momento. Comunícate directamente con nosotros a través de WhatsApp.</p>
+      <a href="https://wa.me/+595986167081?text=Hola,%20necesito%20asesoramiento%20o%20presupuesto" target="_blank" class="btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/+595986167081?text=Hola,%20quisiera%20hacer%20una%20consulta" class="float-ws" target="_blank" aria-label="Contacto WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2026 BG Servicios Generales. Todos los derechos reservados. | La solución a cualquier hora y momento.</p>
+  </footer>
+
 </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redireccionando...</title>
+    <script type="text/javascript">
+      // Limpia los parámetros de Facebook e intenta cargar la raíz del sitio
+      var l = window.location;
+      if (l.search.indexOf('fbclid=') !== -1) {
+        // Redirige eliminando los parámetros de seguimiento de Facebook
+        window.location.replace(l.protocol + '//' + l.hostname + l.pathname);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Cargando sitio...</p>
+  </body>
 </html>
