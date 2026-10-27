@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo a BG Servicios Generales...</title>
+  <script>
+    // Este script detecta si Facebook añadió parámetros basura a la URL (ej: ?fbclid=...)
+    // y redirige limpiamente a la página principal de tu sitio en GitHub Pages.
+    
+    var urlActual = window.location.href;
+    
+    // Puedes cambiar 'tu-usuario' y 'tu-repositorio' por los datos reales de tu GitHub Pages,
+    // o dejar la redirección automática a la raíz de tu dominio:
+    var dominioBase = window.location.origin + window.location.pathname.split('/')[1] ? '/' + window.location.pathname.split('/')[1] + '/' : '/';
+    
+    // Limpiamos cualquier parámetro extraño que meta Facebook al final
+    window.location.replace(window.location.origin + window.location.pathname.split('?')[0]);
+  </script>
+</head>
+<body>
+  <p>Redirigiendo al sitio web de BG Servicios Generales...</p>
+</body>
+</html>
